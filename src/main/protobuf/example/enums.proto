@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package enums;
+
+import "google/protobuf/descriptor.proto";
+
+option java_package = "example.protobuf";
+
+enum Foo {
+    NONE_CLASS = 0;
+    FOO_ONE = 1;
+    FOO_TWO = 2;
+}
+enum Bar {
+    NONE_SUB = 0;
+    BAR_ONE = 1;
+}
+
+extend google.protobuf.MessageOptions {
+    // TODO register this number
+    MessageOptions message = 102000;
+}
+
+message MessageOptions {
+    Bar bar = 1;
+  
+    Foo foo = 2;
+}

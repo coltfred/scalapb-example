@@ -1,0 +1,10 @@
+/.idea
+target/
+/project/project
+/project/target
+/.scalafmt.conf
+/scalastyle-config.xml
+.bloop
+.metals
+.DS_Store
+*~
